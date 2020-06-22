@@ -1,0 +1,371 @@
+.topbar-wrapper{
+  width: 100%;
+  height: 40px;
+  background-color: #333;
+  line-height: 40px;
+}
+.topbar a{
+  font-size: 12px;
+  color: #b0b0b0;
+  display: block;
+}
+.topbar a:hover{
+  color: white;
+}
+.service, .topbar li{
+  float: left;
+}
+.user-info, .shop-cart{
+  float: right;
+}
+.topbar .line{
+  color: #424242;
+  font-size: 12px;
+  margin: 0 8px;
+}
+.shop-cart{
+  margin-left: 25px;
+}
+.shop-cart a{
+  width: 100px;
+  background-color: #424242;
+  text-align: center;
+}
+.shop-cart:hover a{
+  background-color: white;
+  color: #ff6700;
+}
+.shop-cart i{
+  margin-right: 3px;
+}
+.app .qrcode{
+  position: absolute;
+  left: -32px;
+  /* height: 148px; */
+  width: 124px;
+  line-height: 1;
+  text-align: center;
+  background-color: white;
+  color: #333;
+  box-shadow: 0 0 5px rgb(0, 0, 0, .3);
+  /* display: none; */
+  height: 0;
+  overflow: hidden;
+  transition: height 300ms;
+  z-index: 9999;
+}
+/* .app-wrapper:hover .app .qrcode{ */
+.app:hover .qrcode,
+.app:hover::after{
+  display: block;
+  height: 148px;
+}
+.app .qrcode img{
+  width: 90px;
+  margin: 17px;
+  margin-bottom: 10px;
+}
+.app{
+  position: relative;
+}
+/* .app-wrapper:hover .app::after{ */
+.app::after{
+  display: none;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-color: white;
+  border-top: none;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.head-wrapper{
+  position: relative;
+}
+.head{
+  height: 100px;
+  /* background-color: yellowgreen; */
+  min-width: 1226;
+}
+.head .logo{
+  float: left;
+  height: 55px;
+  width: 55px;
+  margin: 22px 0;
+  position: relative;
+  overflow: hidden;
+  text-indent: -999px;    /* 负缩进隐藏文字，只允许搜索引擎和爬虫看到 */
+}
+.head .logo a{
+  height: 55px;
+  width: 55px;
+  background-color: #ff6700;
+  position: absolute;
+  left: 0;        /* transition功能的需求：必须有明确的起点终点位置数值 */
+  background-position: center;
+  transition: 300ms;
+}
+.head .logo .mi{
+  background-image: url(/img/mi-logo.png);
+}
+.head .logo .home{
+  left: -55px;
+  background-image: url(/img/mi-home.png);
+}
+.head .logo:hover .home{
+  left: 0;
+}
+.head .logo:hover .mi{
+  left: 55px;
+}
+.head .navi-wrapper{
+  float: left;
+}
+.navi > li{
+  float: left;
+  padding: 0 10px;
+  font-size: 18px;
+}
+.category-wrapper{
+  position: relative;
+}
+.left-menu{
+  width: 234px;
+  height: 440px;
+  background-color: rgba(0, 0, 0, 0.6);
+  line-height: 1;
+  padding: 20px 0;
+  position: absolute;
+  z-index: 999;
+  left: -105px;
+}
+.left-menu a{
+  font-size: 16px;
+  color: white;
+  display: block;
+  height: 44px;
+  width: 174px;
+  padding: 0 30px;
+  line-height: 42px;
+}
+.left-menu a i{
+  float: right;
+  line-height: 44px;
+}
+.left-menu a:hover{
+  background-color: #ff6700;
+}
+.head .navi{
+  height: 100px;
+  line-height: 100px;
+  /* background-color: violet; */
+  padding-left: 50px;
+}
+.navi .category{
+  visibility: hidden;
+}
+.navi > li:hover > a{
+  color: #ff6700;
+}
+.navi .goods-info{
+  height: 0;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  transition: height 300ms;
+  z-index: 9999;
+}
+.navi li:not(:first-of-type):not(:nth-last-of-type(2)):not(:nth-last-of-type(1)):hover ~.goods-info,
+.goods-info:hover{
+  height: 230px;
+  border: 1px solid #b0b0b0;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 6px 5px rgba(0, 0, 0, .3)
+  
+}
+
+.searchbar-wrapper{
+  width: 290px;
+  height: 50px;
+  background-color: red;
+  float: right;
+  line-height: 50px;
+  margin: 25px 0;
+  border: 1px solid #e0e0e0;
+}
+.searchbar{
+  height: 100%;
+  width: 100%;
+}
+.searchbar .input{
+  height: 100%;
+  width: 240px;
+  float: left;
+  border: none;
+  padding: 0 10px;
+  border-right: 1px solid #e0e0e0;
+}
+.searchbar .search-btn{
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border: none;
+  padding: 0;
+  float: left;
+  color: #616161;
+  /* transition: color 300ms; */
+  transition: background-color 300ms;
+}
+.searchbar .input:focus,
+.searchbar .input:focus + .search-btn{
+  outline: 1px solid #ff6700;
+}
+.search-btn:hover{
+  background-color: #ff6700;
+  color: white;
+}
+
+.banner{
+  position: relative;
+  height: 480px;
+}
+.banner .img-list li{
+  position: absolute;
+  width: 100%;
+}
+.banner img{
+  width: 100%;
+  vertical-align: top;
+  margin-top: -2px;
+}
+.banner .pointer{
+  position: absolute;
+  right: 36px;
+  bottom: 24px;
+}
+.pointer a{
+  width: 8px;
+  height: 8px;
+  float: left;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  border-radius: 50%;
+  margin: 0 6px;
+}
+.pointer a:hover,
+.pointer a:active{
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.4);
+}
+.arrows a{
+  width: 41px;
+  height: 69px;
+  position: absolute;
+  background-image: url(/img/icon-slides.png);
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.arrows .prev{
+  left: 234px;
+  background-position: -84px 0;
+}
+.arrows .next{
+  right: 0;
+  background-position: -125px 0;
+}
+.arrows .prev:hover{
+  background-position: 0 0;
+}
+.arrows .next:hover{
+  right: 0;
+  background-position: -42px 0;
+}
+
+.right-tools{
+  width: 26px;
+  height: 260px;
+  position: fixed;
+  background-color: turquoise;
+  right: 50%;
+  margin-right: -666;
+  bottom: 60px;
+}
+
+.neck{
+  height: 170px;
+  margin-top: 14px;
+}
+.neck ul{
+  float: left;
+}
+.neck .shortcut{
+  width: 234px;
+  height: 100%;
+  background-color: #5f5750;
+  margin-right: 18px;
+}
+.neck .shortcut li{
+  position: relative;
+  float: left;
+  width: 76px;
+  height: 84px;
+}
+.neck .shortcut li::before{
+  content: '';
+  position: absolute;
+  width: 64px;
+  height: 1px;
+  background-color: #665e57;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.neck .shortcut li::after{
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 64px;
+  background-color: #665e57;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.neck .shortcut a{
+  display: block;
+  width: 76px;
+  height: 84px;
+  color: #cfccca;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+  line-height: 42px;
+}
+.neck .shortcut a:hover{
+  color: white;
+}
+.shortcut i{
+  display: block;
+  font-size: 24px;
+}
+.neck-imgs{
+  display: block;
+}
+.neck-imgs li{
+  float: left;
+}
+.neck-imgs li:nth-of-type(2){
+  margin: 0 19px;
+}
+.neck-imgs img{
+  width: 330px;
+  height: 100%;
+}
